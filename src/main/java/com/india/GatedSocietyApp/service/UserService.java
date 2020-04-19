@@ -78,7 +78,7 @@ public class UserService  {
             user.setPassword(passwordEncoder.encode(request.getPassword()));
             user.setRoles(roleList);
             user.setFirstName(request.getFirstName());
-            user.setLastName(request.getLName());
+            user.setLastName(request.getLastName());
             return Optional.of(userRepository.save(user));
         }
         return Optional.empty();

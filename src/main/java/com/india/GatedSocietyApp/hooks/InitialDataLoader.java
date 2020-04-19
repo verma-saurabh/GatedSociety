@@ -50,20 +50,6 @@ public class InitialDataLoader implements
 
         Privilege raiseTickets = createPrivilegeIfNotFound("RAISE_TICKETS");
 
-
-        /*Role adminRole = createRoleIfNotFound("ROLE_ADMIN", Arrays.asList(readUsers, updateUsers, addUsers));
-        Role residentRole = createRoleIfNotFound("ROLE_RESIDENT", Arrays.asList(approveCab, approveDelivery, approveGuest, approveMaid));
-        Role facilityMgrRole = createRoleIfNotFound("ROLE_FM", Arrays.asList(readTickets));
-
-        //Role SecurityPersonnelRole = createRoleIfNotFound("ROLE_SP", Arrays.asList());
-
-        User user = new User();
-        user.setFirstName("Saurabh");
-        user.setLastName("verma");
-        user.setRoles(Arrays.asList(adminRole));*/
-        //userRepository.save(new User());
-
-
     }
 
     private Privilege createPrivilegeIfNotFound(String name) {

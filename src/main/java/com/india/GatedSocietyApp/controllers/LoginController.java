@@ -32,7 +32,7 @@ public class LoginController {
     }
 
     @PostMapping(value = "/signup")
-    @PreAuthorize("hasRole('ROLE_ADMIN')")
+    @PreAuthorize("hasRole('ROLE_CSR')")
     public User signup(@RequestBody @Valid SignUpRequest signUpRequest) {
         return userService.signup(signUpRequest)
                 .orElseThrow(() -> new HttpServerErrorException(HttpStatus.BAD_REQUEST, "User Already Exists"));

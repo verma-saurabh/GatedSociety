@@ -11,7 +11,7 @@ import java.util.List;
 @Setter
 public class SignUpRequest {
     private String firstName;
-    private String lName;
+    private String lastName;
     private String email;
     private String password;
     private List<Role> roleList;

@@ -22,7 +22,8 @@ public class AdminController {
     private AdminService adminService;
 
     @GetMapping(value = "/users")
-    @PreAuthorize("@SecurityService.hasPrivilege('READ_USERS')")
+    //@PreAuthorize("@securityConfig.hasRole('READ_ADMIN')")
+    @PreAuthorize("@jwtTokenFilter.hasRole('ROLE_ADMIN')")
     public List<UserDto> usersAttribute() {
         return adminService.findAll()
                 .stream()
